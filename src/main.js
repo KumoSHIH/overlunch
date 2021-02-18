@@ -17,11 +17,10 @@ new Vue({
   components: { App },
   template: '<App/>',
   created(){
-    const uuid = '8f138c3f-2a4e-454e-9dcf-8ea2379b5549';
-    // const api = 'https://postman-echo.com/get/?menu=1';
-    var api = `https://course-ec-api.hexschool.io/api/${uuid}/ec/products`;
-    axios.get(api).then( response => {
-      console.log(response)
+    const api = 'http://localhost:3000/products';
+    axios.get(api).then( res => {
+      console.log(res);
+      console.log(res.data);
     })
   }
 })
